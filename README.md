@@ -78,10 +78,12 @@ Current Progress
 Neon database setup
 Python connection working
 Initial schema (V1)
+Constraints (V2)
+RBAC (V3)
 
 Next Steps
 
-Add constraints and indexes (V2)
-Implement roles and security
+Add indexes
+Add Materialized view
 Build stored procedures
 Create seed and concurrency scripts
