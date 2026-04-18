@@ -45,6 +45,16 @@ USING (
         WHERE customer_id = current_setting('app.current_customer_id')::INT
     )
 );
+
+CREATE POLICY customer_select_own_profile
+ON customers
+FOR SELECT
+TO customer_role
+USING (
+    customer_id = current_setting('app.current_customer_id')::INT
+);
+
+
 -- Vendor Policy
 CREATE POLICY vendor_select_own_products
 ON products

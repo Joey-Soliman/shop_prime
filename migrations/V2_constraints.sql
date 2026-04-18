@@ -30,3 +30,7 @@ CHECK (total_amount > 0);
 ALTER TABLE order_items
 ADD CONSTRAINT chk_order_items_price_positive
 CHECK (price_at_purchase > 0);
+
+ALTER TABLE products
+ADD CONSTRAINT chk_products_price_positive
+CHECK (price > 0);
